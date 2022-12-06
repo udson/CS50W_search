@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+    </head>
+    <style type="text/css">
+        #links_container {
+            display: block;
+            text-align: right;
+        }
+        .search_bar {
+            border: 1px solid #dfe1e5;
+            flex: 100%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100%;
+        }
+        input[type="text"] {
+            height: 30px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+        }
+        input[type="submit"] {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+    <body>
+        <div id="links_container">
+            <a href="image_search.html">Google Image Search</a>
+            <a href="advanced_search.html">Google Advanced Search</a>
+        </div>
+        <div id="form_container">
+            <form action="https://www.google.com/search">
+                <div class="search_bar">
+                    <input type="text" name="q">
+                </div>
+                <div class="search_buttons">
+                    <input type="submit" value="Google Search">
+                    <input type="submit" value="I’m Feeling Lucky">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <style>
+            #links_container {
+                height: 20px;
+                display: block;
+                text-align: right;
+                color: rgba(0,0,0,.87);
+                font: 13px arial,sans-serif;
+            }
+            #links_container > a {
+                color: rgba(0,0,0,.87);
+                text-decoration: none;
+            }
+            .label {
+                color: #d93025;
+                font: 20px arial,sans-serif;
+                margin: 25px 35px;
+            }
+            #form_container {
+                margin: 40px 2% 0 45px;
+            }
+            .form_item {
+                font-family: arial,sans-serif;
+            }
+            .fi_left {
+                float: left;
+                /* display: inline-block; */
+                min-width: 167px;
+                min-height: 41px;
+                vertical-align: middle;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="links_container">
+            <a href="index.html">Google Search</a>
+        </div>
+        <div class="label">
+            <label>Advanced search</label>
+        </div>
+        <div style="border-bottom: 1px solid #ebebeb;"></div>
+        <div id="form_container">
+            <form action="https://www.google.com/search" name="f">
+                <div class="form_item">
+                    <div class="fi_left">
+                        <span>Find pages with...</span>
+                    </div>
+                    <div class="fi_middle">
+                        &nbsp; 
+                    </div>
+                    <div class="fi_right">
+
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="fi_left">
+                        <label for="as_q">all these words:</label>
+                    </div>
+                    <div class="fi_middle">
+                        <input type="text" id="as_q" name="as_q">
+                    </div>
+                    <div class="fi_right">
+                        Type the important words:  <span class="BFlQMb">tri-colour rat terrier</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

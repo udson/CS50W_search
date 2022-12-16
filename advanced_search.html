@@ -4,11 +4,12 @@
         <title>Advanced Search</title>
         <style>
             #links_container {
-                height: 20px;
                 display: block;
                 text-align: right;
                 color: rgba(0,0,0,.87);
                 font: 13px arial,sans-serif;
+                width: 100%;
+                padding: 10px;
             }
             #links_container > a {
                 color: rgba(0,0,0,.87);
@@ -102,11 +103,27 @@
                 border: rgba(0,0,0,0) solid 1px;
                 outline: rgba(0,0,0,0) 0;
             }
+            .masked_img {
+                height: 35px;
+                border-radius: 12px;
+                padding: 10px;
+                display: flex;
+            }
+            .top_elements {
+                display: inline-flex;
+                width: 100%;
+                vertical-align: middle;
+            }
         </style>
     </head>
     <body>
-        <div id="links_container">
-            <a href="index.html">Google Search</a>
+        <div class="top_elements">
+            <div>
+                <img class="masked_img" src="asset-v1_HarvardX+CS50W+Web+type@thumbnail+block@course_image-png-375x200.jpg" alt="Harvard CS50W">
+            </div>
+            <div id="links_container">
+                <a href="index.html">Google Search</a>
+            </div>
         </div>
         <div class="label">
             <label>Advanced search</label>

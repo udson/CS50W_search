@@ -5,11 +5,11 @@
     </head>
     <style type="text/css">
         #links_container {
-            height: 150px;
             display: block;
             text-align: right;
             color: rgba(0,0,0,.87);
             font: 13px arial,sans-serif;
+            padding: 10px;
         }
         #links_container > a {
             color: rgba(0,0,0,.87);
@@ -61,13 +61,23 @@
         #form_container {
             height: 200px;
             text-align: center;
+            padding: 20px;
         }
+        .image_container {
+            text-align: center;
+        }
+        .image_container img {
+            border-radius: 10px;
+         }
     </style>
     <body>
         <div id="links_container">
             <a href="image_search.html">Image Search</a>
             |
             <a href="advanced_search.html">Advanced Search</a>
+        </div>
+        <div class="image_container">
+            <img class="masked_img" src="asset-v1_HarvardX+CS50W+Web+type@thumbnail+block@course_image-png-375x200.jpg" alt="Harvard CS50W">
         </div>
         <div id="form_container">
             <form action="https://www.google.com/search">

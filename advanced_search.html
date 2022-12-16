@@ -24,14 +24,83 @@
             }
             .form_item {
                 font-family: arial,sans-serif;
+                width: 90%;
+            }
+            .form_item:after {
+                content: "";
+                display: table;
+                clear: both;
             }
             .fi_left {
                 float: left;
-                /* display: inline-block; */
-                min-width: 167px;
-                min-height: 41px;
+                width: 20%;
+                padding: 10px;
+                height: 30px;
+                display: table-cell;
                 vertical-align: middle;
-                width: 50%;
+                color: #222;
+            }
+            .fi_middle {
+                float: left;
+                width: 33%;
+                padding: 10px;
+                height: 30px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .fi_right {
+                float: left;
+                width: 25%;
+                padding: 10px;
+                margin-left: 10px;
+                height: 30px;
+                display: table-cell;
+                color: #555;
+                font-size: 11px;
+                vertical-align: middle;
+            }
+            .text_input {
+                width: 100%;
+                border-radius: 1px;
+                border: 1px solid #d9d9d9;
+                border-top: 1px solid #c0c0c0;
+                font-size: 13px;
+                height: 25px;
+                padding: 1px 8px;
+            }
+            .text_input:focus {
+                box-shadow: inset 0 1px 2px rgb(0 0 0 / 30%);
+                border: 1px solid #4d90fe;
+                outline: none;
+            }
+            .span_text {
+                color: #666;
+                font-family: monospace;
+                font-size: 11px;
+                white-space: pre;
+            }
+            .advanced_button {
+                box-shadow: none;
+                background-color: #4d90fe;
+                background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+                border: 1px solid #3079ed;
+                color: #fff;
+            }
+            .advanced_button:hover {
+                background-color: #357ae8;
+                border: 1px solid #2f5bb7;
+                border-image: initial;
+            }
+            .advanced_button:active {
+                box-shadow: inset 0 1px 2px rgb(0 0 0 / 30%);
+                background: #357ae8;
+                border: 1px solid #2f5bb7;
+                border-top: 1px solid #2f5bb7;
+            }
+            .advanced_button:focus {
+                box-shadow: inset 0 0 0 1px #fff;
+                border: rgba(0,0,0,0) solid 1px;
+                outline: rgba(0,0,0,0) 0;
             }
         </style>
     </head>
@@ -53,7 +122,7 @@
                         &nbsp; 
                     </div>
                     <div class="fi_right">
-
+                        To do this in the search box.
                     </div>
                 </div>
                 <div class="form_item">
@@ -61,10 +130,52 @@
                         <label for="as_q">all these words:</label>
                     </div>
                     <div class="fi_middle">
-                        <input type="text" id="as_q" name="as_q">
+                        <input class="text_input" type="text" id="as_q" name="as_q">
                     </div>
                     <div class="fi_right">
-                        Type the important words:  <span class="BFlQMb">tri-colour rat terrier</span>
+                        Type the important words:  <span class="span_text">tri-colour rat terrier</span>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="fi_left">
+                        <label for="as_epq">this exact word or phrase:</label>
+                    </div>
+                    <div class="fi_middle">
+                        <input class="text_input" type="text" id="as_epq" name="as_epq">
+                    </div>
+                    <div class="fi_right">
+                        Put exact words in quotes:  "<span class="span_text">rat terrier</span>"
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="fi_left">
+                        <label for="as_oq">any of these words:</label>
+                    </div>
+                    <div class="fi_middle">
+                        <input class="text_input" type="text" id="as_oq" name="as_oq">
+                    </div>
+                    <div class="fi_right">
+                        Type <span class="span_text">OR</span> between all the words you want:  <span class="span_text">miniature OR standard</span>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="fi_left">
+                        <label for="as_eq">none of these words:</label>
+                    </div>
+                    <div class="fi_middle">
+                        <input class="text_input" type="text" id="as_eq" name="as_eq">
+                    </div>
+                    <div class="fi_right">
+                        Put a minus sign just before words that you don't want:  <span class="span_text">-rodent, -"Jack Russell"</span>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="fi_left">
+                    </div>
+                    <div class="fi_middle" style="text-align:right">
+                        <input class="advanced_button" style="-webkit-user-select:none;user-select:none;line-height:100%;height:30px;min-width:120px" value="Advanced Search" type="submit">
+                    </div>
+                    <div class="fi_right">
                     </div>
                 </div>
             </form>
